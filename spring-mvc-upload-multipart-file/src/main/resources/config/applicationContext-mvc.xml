@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 配置视图解析器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 配置上传解析器 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 配置上传文件最大尺寸为1000MB -->
+		<property name="maxUploadSize" value="1048576000" />
+		<!-- 设置在文件上传时允许写到内存中的最大值，以字节为单位计算，默认是10240 -->
+		<property name="maxInMemorySize" value="4096" />
+		<!-- 表示用来解析request请求的默认编码格式，当没有指定的时候根据Servlet规范会使用默认值ISO-8859-1。 -->
+		<!-- 当request自己指明了它的编码格式的时候就会忽略这里指定的defaultEncoding -->
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<!-- 可以访问静态资源 -->
+	<mvc:default-servlet-handler />
+
+	<!-- 解析@RequestMapping -->
+	<mvc:annotation-driven />
+
+</beans>
