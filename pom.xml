@@ -23,6 +23,9 @@
 
 	<modules>
 		<module>spring-mvc-upload-multipart-file</module>
+		<module>spring-mvc-upload-commons-multipart-resolver</module>
+		<module>spring-mvc-response-request-body</module>
+		<module>spring-mvc-init-binder</module>
 	</modules>
 
 

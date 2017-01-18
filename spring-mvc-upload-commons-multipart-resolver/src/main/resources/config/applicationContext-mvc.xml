@@ -7,12 +7,6 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<!-- 可以访问静态资源 -->
-	<mvc:default-servlet-handler />
-
-	<!-- 解析@RequestMapping -->
-	<mvc:annotation-driven />
-
 	<!-- 配置视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/pages/" />
@@ -29,5 +23,11 @@
 		<!-- 当request自己指明了它的编码格式的时候就会忽略这里指定的defaultEncoding -->
 		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
+
+	<!-- 可以访问静态资源 -->
+	<mvc:default-servlet-handler />
+
+	<!-- 解析@RequestMapping -->
+	<mvc:annotation-driven />
 
 </beans>

@@ -1,7 +1,9 @@
 # framework
 [我的博客](http://blog.csdn.net/je_ge "JE-GE的浆糊") 
-###SpringMVC 系列教程1-文件上传-配置
-###SpringMVC 系列教程2-文件上传-MultipartFile
+###spring-mvc-upload-multipart-file 文件上传-MultipartFile
+###spring-mvc-upload-commons-multipart-resolver 文件上传-MultipartResolver
+###spring-mvc-response-request-body 接收和输出json字符串
+###spring-mvc-init-binder 对象精准绑定参数接收
 
 
 **如果觉得我的文章或者代码对您有帮助,可以请我喝杯咖啡。您的支持将鼓励我继续创作!谢谢！ **

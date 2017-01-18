@@ -12,7 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
-
+/**
+ * @author JE哥
+ * @email 1272434821@qq.com
+ * @description:上传控制器类
+ */
 @Controller
 public class MultipartFileUploadController {
 
@@ -38,7 +42,7 @@ public class MultipartFileUploadController {
       System.out.println("前台jsp提交上传控件的name属性：" + upload.getName());
       System.out.println("获取上传文件的后缀名：" + FilenameUtils.getExtension(upload.getOriginalFilename()));
 
-      String webapp = request.getServletContext().getRealPath("/upload");
+      String webapp = request.getServletContext().getRealPath("/uploadFile");
       System.out.println("上传文件保存到服务器webapp的路径:" + webapp);
 
       // 存放文件的路径
