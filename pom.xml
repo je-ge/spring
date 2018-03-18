@@ -26,6 +26,7 @@
 		<module>spring-mvc-upload-commons-multipart-resolver</module>
 		<module>spring-mvc-response-request-body</module>
 		<module>spring-mvc-init-binder</module>
+		<module>spring-aop-transaction</module>
 	</modules>
 
 
